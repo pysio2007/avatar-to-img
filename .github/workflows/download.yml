@@ -1,0 +1,39 @@
+name: Download and Commit Files
+
+on:
+  workflow_dispatch: # 手动触发
+  schedule:
+    - cron: '0 0 * * *' # 每天凌晨 0:00 UTC 执行
+
+jobs:
+  download-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Read JSON file
+        id: read-json
+        run: |
+          echo "::set-output name=json_data::$(cat .github/link.json)"
+
+      - name: Download and rename files
+        run: |
+          json_data=$(echo "${{ steps.read-json.outputs.json_data }}" | jq -r '.[] | "\(.filename) \(.link)"')
+          while IFS=' ' read -r filename link; do
+            curl -s "$link" -o "$filename" || echo "Failed to download $link" # 添加错误处理
+          done <<< "$json_data"
+
+      - name: Add files
+        run: git add *
+
+      - name: Commit changes
+        run: git commit -m "Download files from link.json" || echo "No changes to commit" # 添加错误处理
+
+      - name: Push changes
+        run: git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
