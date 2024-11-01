@@ -27,6 +27,7 @@ jobs:
       - name: Download and rename files
         run: |
           if [ -n "${{ steps.read-json.outputs.json_data }}" ]; then
+            # Correctly feed the JSON data to jq
             jq -r '.[] | "\(.filename) \(.link)"' <<< "${{ steps.read-json.outputs.json_data }}" | while IFS=' ' read -r filename link; do
               curl -s -f "$link" -o "$filename" || echo "Failed to download $link to $filename"
             done
@@ -36,7 +37,12 @@ jobs:
         run: git add *
 
       - name: Commit changes
-        run: if git diff-index --quiet HEAD --; then echo "No changes to commit"; else git commit -m "Download files from link.json"; fi
+        run: |
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit"
+          else
+            git commit -m "Download files from link.json" || echo "Git commit failed"
+          fi
 
       - name: Push changes
         if: success()
