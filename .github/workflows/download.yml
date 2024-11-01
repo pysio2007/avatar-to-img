@@ -3,44 +3,46 @@ name: Download and Commit Files
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Adjust this cron expression to your timezone
+    - cron: '0 0 * * *'  # 每天午夜运行
 
 jobs:
   download-and-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: 检出代码
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PUSH_TOKEN }}
 
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
+      - name: 安装依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl
 
-      - name: Read and Process JSON
-        id: process-json
+      - name: 下载并重命名文件
         run: |
           if [ -f ".github/link.json" ]; then
-            while IFS= read -r line; do
-              filename=$(echo "$line" | jq -r '.filename')
-              link=$(echo "$line" | jq -r '.link')
-              curl -s -f "$link" -o "$filename" || echo "Failed to download $link to $filename"
-            done < <(jq -c '.[]' .github/link.json)
+            jq -c '.[]' .github/link.json | while read -r item; do
+              filename=$(echo "$item" | jq -r '.filename')
+              link=$(echo "$item" | jq -r '.link')
+              curl -L -o "$filename" "$link"
+            done
           else
-            echo "::error file=.github/link.json::link.json file not found"
+            echo "link.json 文件不存在"
+            exit 1
           fi
 
-      - name: Add files
-        run: git add *
-
-      - name: Commit changes
+      - name: 配置 Git
         run: |
-          if git diff-index --quiet HEAD --; then
-            echo "No changes to commit"
-          else
-            git commit -m "Download files from link.json" || echo "Git commit failed"
-          fi
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
 
-      - name: Push changes
-        if: success()
-        run: git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
+      - name: 提交更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有检测到更改，跳过提交。"
+          else
+            git commit -m "自动下载并更新文件"
+            git push origin HEAD:${{ github.ref }}
+          fi
