@@ -15,22 +15,17 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Read JSON file
-        id: read-json
+      - name: Read and Process JSON
+        id: process-json
         run: |
           if [ -f ".github/link.json" ]; then
-            echo "::set-output name=json_data::$(cat .github/link.json)"
+            while IFS= read -r line; do
+              filename=$(echo "$line" | jq -r '.filename')
+              link=$(echo "$line" | jq -r '.link')
+              curl -s -f "$link" -o "$filename" || echo "Failed to download $link to $filename"
+            done < <(jq -c '.[]' .github/link.json)
           else
             echo "::error file=.github/link.json::link.json file not found"
-          fi
-
-      - name: Download and rename files
-        run: |
-          if [ -n "${{ steps.read-json.outputs.json_data }}" ]; then
-            # Correctly feed the JSON data to jq
-            jq -r '.[] | "\(.filename) \(.link)"' <<< "${{ steps.read-json.outputs.json_data }}" | while IFS=' ' read -r filename link; do
-              curl -s -f "$link" -o "$filename" || echo "Failed to download $link to $filename"
-            done
           fi
 
       - name: Add files
@@ -48,4 +43,4 @@ jobs:
         if: success()
         run: git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
