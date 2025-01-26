@@ -1,0 +1,82 @@
+name: Yearly API Check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'  # 每5分钟运行一次
+
+jobs:
+  check-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PUSH_TOKEN }}
+
+      - name: 安装依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl
+
+      - name: 等待 1 分钟
+        run: sleep 60
+
+      - name: 获取API数据并更新JSON
+        run: |
+          current_time=$(date -Is)
+          year_ago=$(date -Is -d "1 year ago")
+          
+          # 获取API数据
+          response=$(curl -s "https://blogapi.pysio.online/checkh")
+          
+          # 检查year_cheak.json是否存在
+          if [ ! -f "year_cheak.json" ]; then
+            echo "[]" > year_cheak.json
+          fi
+          
+          # 读取现有数据
+          existing_data=$(cat year_cheak.json)
+          
+          # 处理新数据
+          new_entry=$(echo $response | jq '.')
+          # 创建用于比较的数据（排除last_heartbeat）
+          new_entry_compare=$(echo $new_entry | jq 'del(.last_heartbeat)')
+          
+          # 检查是否存在记录
+          if [ "$(echo "$existing_data" | jq length)" -eq 0 ]; then
+            # 第一条记录
+            updated_data=$(echo "[]" | jq ". + [{start_time: \"$current_time\", end_time: null, data: $new_entry}]")
+          else
+            last_entry=$(echo "$existing_data" | jq -r '. | last')
+            last_entry_compare=$(echo "$last_entry.data" | jq 'del(.last_heartbeat)')
+            
+            if [ "$(echo "$last_entry_compare" | jq -r '.')" = "$(echo "$new_entry_compare" | jq -r '.')" ]; then
+              # 除last_heartbeat外数据相同，更新最后一条记录的 end_time
+              updated_data=$(echo "$existing_data" | jq "[.[0:-1], (.[-1] | .end_time = \"$current_time\")] | flatten")
+            else
+              # 数据有变化，结束上一条记录并添加新记录
+              updated_data=$(echo "$existing_data" | jq "[.[0:-1], (.[-1] | .end_time = \"$current_time\"), {start_time: \"$current_time\", end_time: null, data: $new_entry}] | flatten")
+            fi
+          fi
+          
+          # 只保留最近一年的数据
+          filtered_data=$(echo "$updated_data" | jq "[.[] | select(.start_time >= \"$year_ago\")]")
+          
+          # 写入文件
+          echo "$filtered_data" > year_cheak.json
+
+      - name: 配置 Git
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: 提交更改
+        run: |
+          git add year_cheak.json
+          if git diff --cached --quiet; then
+            echo "没有检测到更改，跳过提交。"
+          else
+            git commit -m "自动更新年度 API 检查数据"
+            git push origin HEAD:${{ github.ref }}
+          fi
