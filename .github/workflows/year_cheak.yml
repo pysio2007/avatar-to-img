@@ -28,7 +28,7 @@ jobs:
           year_ago=$(date -Is -d "1 year ago")
           
           # 获取API数据并验证
-          response=$(curl -s "https://blogapi.pysio.online/checkh")
+          response=$(curl -s "https://blogapi.pysio.online/check")
           
           # 打印响应以进行调试
           echo "API Response:"
