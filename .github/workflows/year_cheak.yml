@@ -27,8 +27,18 @@ jobs:
           current_time=$(date -Is)
           year_ago=$(date -Is -d "1 year ago")
           
-          # 获取API数据
+          # 获取API数据并验证
           response=$(curl -s "https://blogapi.pysio.online/checkh")
+          
+          # 打印响应以进行调试
+          echo "API Response:"
+          echo "$response"
+          
+          # 验证响应是否为有效的JSON
+          if ! echo "$response" | jq . >/dev/null 2>&1; then
+            echo "Error: Invalid JSON response"
+            exit 1
+          fi
           
           # 检查year_cheak.json是否存在
           if [ ! -f "year_cheak.json" ]; then
@@ -38,8 +48,11 @@ jobs:
           # 读取现有数据
           existing_data=$(cat year_cheak.json)
           
-          # 处理新数据
-          new_entry=$(echo $response | jq '.')
+          # 处理新数据（添加错误处理）
+          if ! new_entry=$(echo "$response" | jq -e '.'); then
+            echo "Error: Failed to parse response as JSON"
+            exit 1
+          fi
           # 创建用于比较的数据（排除last_heartbeat）
           new_entry_compare=$(echo $new_entry | jq 'del(.last_heartbeat)')
           
