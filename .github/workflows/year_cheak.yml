@@ -27,15 +27,11 @@ jobs:
           current_time=$(date -Is)
           year_ago=$(date -Is -d "1 year ago")
           
-          # 获取API数据并预处理为单行JSON
-          response=$(curl -s "https://blogapi.pysio.online/check" | tr -d '\n')
+          # 获取API数据
+          response=$(curl -s "https://blogapi.pysio.online/check")
           
-          # 打印响应以进行调试
           echo "API Response:"
           echo "$response"
-          
-          # 直接解析JSON响应
-          new_entry=$(echo "$response" | jq -r '.')
           
           # 检查JSON文件是否存在
           if [ ! -f "year_cheak.json" ]; then
@@ -45,35 +41,34 @@ jobs:
           # 读取现有数据
           existing_data=$(cat year_cheak.json)
           
-          # 创建用于比较的数据（排除last_heartbeat）
-          new_entry_compare=$(echo "$response" | jq 'del(.last_heartbeat)')
+          # 处理新数据（使用echo -n避免额外的换行）
+          new_entry_compare=$(echo -n "$response" | jq 'del(.last_heartbeat)')
           
           # 检查是否存在记录
-          if [ "$(echo "$existing_data" | jq length)" -eq 0; then
+          if [ "$(echo "$existing_data" | jq 'length')" -eq 0; then
             # 第一条记录
-            updated_data=$(jq -n --arg time "$current_time" --argjson data "$response" \
-              '[{start_time: $time, end_time: null, data: $data}]')
+            updated_data=$(echo -n "$response" | jq -R . | jq --arg time "$current_time" \
+              '[{start_time: $time, end_time: null, data: (input | fromjson)}]')
           else
-            last_entry=$(echo "$existing_data" | jq -r '.[-1]')
-            last_entry_compare=$(echo "$last_entry.data" | jq 'del(.last_heartbeat)')
+            last_entry=$(echo "$existing_data" | jq '.[-1]')
+            last_entry_compare=$(echo "$last_entry" | jq '.data | del(.last_heartbeat)')
             
-            if [ "$(echo "$new_entry_compare" | jq -r '.' | md5sum)" = "$(echo "$last_entry_compare" | jq -r '.' | md5sum)" ]; then
+            # 比较数据（排除last_heartbeat）
+            if [ "$(echo "$new_entry_compare" | jq -c '.')" = "$(echo "$last_entry_compare" | jq -c '.')" ]; then
               # 数据相同，更新最后一条记录的 end_time
               updated_data=$(echo "$existing_data" | jq --arg time "$current_time" \
                 '[.[0:-1], (.[-1] | .end_time = $time)] | flatten')
             else
               # 数据有变化，添加新记录
-              updated_data=$(echo "$existing_data" | jq --arg time "$current_time" --argjson data "$response" \
-                '[.[0:-1], (.[-1] | .end_time = $time), {start_time: $time, end_time: null, data: $data}] | flatten')
+              updated_data=$(echo "$existing_data" | jq --arg time "$current_time" \
+                --arg response "$response" \
+                '[.[0:-1], (.[-1] | .end_time = $time), {start_time: $time, end_time: null, data: ($response | fromjson)}] | flatten')
             fi
           fi
           
-          # 只保留最近一年的数据
-          filtered_data=$(echo "$updated_data" | jq --arg year_ago "$year_ago" \
-            '[.[] | select(.start_time >= $year_ago)]')
-          
-          # 写入文件
-          echo "$filtered_data" | jq '.' > year_cheak.json
+          # 只保留最近一年的数据并写入文件
+          echo "$updated_data" | jq --arg year_ago "$year_ago" \
+            '[.[] | select(.start_time >= $year_ago)]' > year_cheak.json
 
       - name: 配置 Git
         run: |
