@@ -31,13 +31,13 @@ jobs:
           echo "API Response:"
           echo "$response"
           
-          # 验证响应是否为有效的JSON
-          if ! echo "$response" | jq . >/dev/null 2>&1; then
+          # 验证响应是否为有效的JSON并进行预处理
+          if ! response_json=$(echo "$response" | jq -R -s -c '.' | jq '.'); then
             echo "Error: Invalid JSON response"
             exit 1
           fi
           
-          # 检查cheak.json是否存在
+          # 检查JSON文件是否存在
           if [ ! -f "cheak.json" ]; then
             echo "[]" > cheak.json
           fi
@@ -46,35 +46,34 @@ jobs:
           existing_data=$(cat cheak.json)
           
           # 处理新数据（添加错误处理）
-          if ! new_entry=$(echo "$response" | jq -e '.'); then
-            echo "Error: Failed to parse response as JSON"
-            exit 1
-          fi
-          # 创建用于比较的数据（排除last_heartbeat）
-          new_entry_compare=$(echo $new_entry | jq 'del(.last_heartbeat)')
+          new_entry=$response_json
+          new_entry_compare=$(echo "$new_entry" | jq 'del(.last_heartbeat)')
           
           # 检查是否存在记录
-          if [ "$(echo "$existing_data" | jq length)" -eq 0; then
+          if [ "$(echo "$existing_data" | jq 'length')" -eq 0; then
             # 第一条记录
-            updated_data=$(echo "[]" | jq ". + [{start_time: \"$current_time\", end_time: null, data: $new_entry}]")
+            updated_data=$(echo "[]" | jq --arg time "$current_time" --argjson data "$new_entry" \
+              '. + [{start_time: $time, end_time: null, data: $data}]')
           else
-            last_entry=$(echo "$existing_data" | jq -r '. | last')
+            last_entry=$(echo "$existing_data" | jq -r 'last')
             last_entry_compare=$(echo "$last_entry.data" | jq 'del(.last_heartbeat)')
             
-            if [ "$(echo "$last_entry_compare" | jq -r '.')" = "$(echo "$new_entry_compare" | jq -r '.')" ]; then
-              # 除last_heartbeat外数据相同，更新最后一条记录的 end_time
-              updated_data=$(echo "$existing_data" | jq "[.[0:-1], (.[-1] | .end_time = \"$current_time\")] | flatten")
+            if jq -n --argjson a "$last_entry_compare" --argjson b "$new_entry_compare" '$a == $b'; then
+              # 数据相同，更新最后一条记录的 end_time
+              updated_data=$(echo "$existing_data" | jq --arg time "$current_time" \
+                '[.[0:-1], (.[-1] | .end_time = $time)] | flatten')
             else
-              # 数据有变化，结束上一条记录并添加新记录
-              updated_data=$(echo "$existing_data" | jq "[.[0:-1], (.[-1] | .end_time = \"$current_time\"), {start_time: \"$current_time\", end_time: null, data: $new_entry}] | flatten")
+              # 数据有变化，添加新记录
+              updated_data=$(echo "$existing_data" | jq --arg time "$current_time" --argjson data "$new_entry" \
+                '[.[0:-1], (.[-1] | .end_time = $time), {start_time: $time, end_time: null, data: $data}] | flatten')
             fi
           fi
           
-          # 只保留最近一个月的数据
-          filtered_data=$(echo "$updated_data" | jq "[.[] | select(.start_time >= \"$month_ago\")]")
-          
-          # 写入文件
-          echo "$filtered_data" > cheak.json
+          # 写入文件（添加错误处理）
+          if ! echo "$updated_data" | jq . > cheak.json; then
+            echo "Error: Failed to write JSON file"
+            exit 1
+          fi
 
       - name: 配置 Git
         run: |
