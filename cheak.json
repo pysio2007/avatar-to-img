@@ -289,7 +289,7 @@
   },
   {
     "start_time": "2025-01-29T04:36:40+00:00",
-    "end_time": null,
+    "end_time": "2025-01-29T04:46:27+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
