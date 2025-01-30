@@ -556,13 +556,25 @@
   },
   {
     "start_time": "2025-01-30T16:45:12+00:00",
-    "end_time": null,
+    "end_time": "2025-01-30T16:54:53+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
       "applicationOnline": true,
       "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\Documents\\Vue-Blog\\Vue-blog-Dev\\src\\.vuepress\\components\\ipcheck.vue",
       "last_heartbeat": 1738255066,
+      "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-01-30T16:54:53+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - Vue-blog-Dev",
+      "last_heartbeat": 1738256065,
       "rgba": "0,122,204,0.15"
     }
   }
