@@ -523,11 +523,23 @@
   },
   {
     "start_time": "2025-01-30T10:38:44+00:00",
-    "end_time": "2025-01-30T15:12:32+00:00",
+    "end_time": "2025-01-30T15:29:17+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1738233490
+    }
+  },
+  {
+    "start_time": "2025-01-30T15:29:17+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\Downloads\\config.yaml",
+      "last_heartbeat": 1738250773,
+      "rgba": "0,122,204,0.15"
     }
   }
 ]
