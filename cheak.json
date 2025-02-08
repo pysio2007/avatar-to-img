@@ -1066,7 +1066,7 @@
   },
   {
     "start_time": "2025-02-08T06:29:16+00:00",
-    "end_time": "2025-02-08T09:13:53+00:00",
+    "end_time": "2025-02-08T09:27:06+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在玩 Destiny 2",
@@ -1074,6 +1074,15 @@
       "introduce": "熊猫正在和奈扎雷克闲聊",
       "last_heartbeat": 1738996061,
       "rgba": "169,169,169,0.15"
+    }
+  },
+  {
+    "start_time": "2025-02-08T09:27:06+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1739006733
     }
   }
 ]
