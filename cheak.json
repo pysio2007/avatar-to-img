@@ -1399,13 +1399,25 @@
   },
   {
     "start_time": "2025-02-11T09:40:59+00:00",
-    "end_time": null,
+    "end_time": "2025-02-11T09:50:59+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
       "applicationOnline": true,
       "introduce": "熊猫正在写代码 - Untitled-1",
       "last_heartbeat": 1739266809,
+      "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-02-11T09:50:59+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\.ssh\\known_hosts",
+      "last_heartbeat": 1739267394,
       "rgba": "0,122,204,0.15"
     }
   }
