@@ -1924,11 +1924,20 @@
   },
   {
     "start_time": "2025-02-14T21:34:43+00:00",
-    "end_time": null,
+    "end_time": "2025-02-14T21:44:40+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1739567988
+    }
+  },
+  {
+    "start_time": "2025-02-14T21:44:40+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1739569414
     }
   }
 ]
