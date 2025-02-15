@@ -1942,7 +1942,7 @@
   },
   {
     "start_time": "2025-02-14T23:22:04+00:00",
-    "end_time": "2025-02-14T23:52:13+00:00",
+    "end_time": "2025-02-15T00:45:59+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
@@ -1950,6 +1950,15 @@
       "introduce": "熊猫正在写代码 - Vue-blog-Dev",
       "last_heartbeat": 1739575221,
       "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-02-15T00:45:59+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1739580274
     }
   }
 ]
