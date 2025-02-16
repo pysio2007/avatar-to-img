@@ -2008,11 +2008,20 @@
   },
   {
     "start_time": "2025-02-15T09:39:34+00:00",
-    "end_time": "2025-02-16T07:14:12+00:00",
+    "end_time": "2025-02-16T07:27:17+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1739612311
+    }
+  },
+  {
+    "start_time": "2025-02-16T07:27:17+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "applicationOnline": false,
+      "last_heartbeat": 1739689887
     }
   }
 ]
