@@ -2329,11 +2329,23 @@
   },
   {
     "start_time": "2025-02-20T03:29:32+00:00",
-    "end_time": "2025-02-20T05:51:52+00:00",
+    "end_time": "2025-02-20T06:13:20+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1740022085
+    }
+  },
+  {
+    "start_time": "2025-02-20T06:13:20+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - AnyCast-WebSite",
+      "last_heartbeat": 1740031940,
+      "rgba": "0,122,204,0.15"
     }
   }
 ]
