@@ -2575,7 +2575,7 @@
   },
   {
     "start_time": "2025-02-22T21:24:57+00:00",
-    "end_time": null,
+    "end_time": "2025-02-22T21:35:32+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
