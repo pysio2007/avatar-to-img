@@ -2770,11 +2770,20 @@
   },
   {
     "start_time": "2025-02-26T15:55:39+00:00",
-    "end_time": "2025-02-26T20:57:44+00:00",
+    "end_time": "2025-02-26T21:19:58+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1740585253
+    }
+  },
+  {
+    "start_time": "2025-02-26T21:19:58+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "applicationOnline": false,
+      "last_heartbeat": 1740604034
     }
   }
 ]
