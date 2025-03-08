@@ -2206,7 +2206,7 @@
   },
   {
     "start_time": "2025-03-08T07:32:05+00:00",
-    "end_time": null,
+    "end_time": "2025-03-08T07:41:56+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
@@ -2214,6 +2214,15 @@
       "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\Downloads\\1\\start.bat",
       "last_heartbeat": 1741419043,
       "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-03-08T07:41:56+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1741419623
     }
   }
 ]
