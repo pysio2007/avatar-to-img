@@ -1,14 +1,5 @@
 [
   {
-    "start_time": "2025-02-13T00:59:21+00:00",
-    "end_time": "2025-02-13T02:57:49+00:00",
-    "data": {
-      "alive": false,
-      "applicationOnline": false,
-      "last_heartbeat": 1739404508
-    }
-  },
-  {
     "start_time": "2025-02-13T02:57:49+00:00",
     "end_time": "2025-02-13T06:32:14+00:00",
     "data": {
@@ -1834,7 +1825,7 @@
   },
   {
     "start_time": "2025-03-12T22:57:55+00:00",
-    "end_time": "2025-03-12T23:53:20+00:00",
+    "end_time": "2025-03-13T01:00:25+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 DataGrip",
