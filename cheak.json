@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-02-15T07:46:03+00:00",
-    "end_time": "2025-02-15T07:55:51+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 DataGrip",
-      "applicationOnline": true,
-      "introduce": "熊猫正在吃 SQL",
-      "last_heartbeat": 1739605473,
-      "rgba": "230,126,34,0.15"
-    }
-  },
-  {
     "start_time": "2025-02-15T07:55:51+00:00",
     "end_time": "2025-02-15T08:19:27+00:00",
     "data": {
@@ -1669,7 +1657,7 @@
   },
   {
     "start_time": "2025-03-15T03:15:22+00:00",
-    "end_time": "2025-03-15T07:39:10+00:00",
+    "end_time": "2025-03-15T07:49:04+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
