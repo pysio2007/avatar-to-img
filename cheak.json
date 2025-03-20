@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-02-20T16:40:27+00:00",
-    "end_time": "2025-02-20T19:14:40+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - AnyCast-WebSite",
-      "last_heartbeat": 1740069566,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-02-20T19:14:40+00:00",
     "end_time": "2025-02-20T19:36:12+00:00",
     "data": {
@@ -1375,7 +1363,7 @@
   },
   {
     "start_time": "2025-03-19T21:14:23+00:00",
-    "end_time": "2025-03-20T16:18:50+00:00",
+    "end_time": "2025-03-20T16:42:47+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
