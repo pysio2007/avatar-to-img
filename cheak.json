@@ -1306,11 +1306,20 @@
   },
   {
     "start_time": "2025-03-26T06:44:51+00:00",
-    "end_time": "2025-03-26T07:51:06+00:00",
+    "end_time": "2025-03-26T08:11:23+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1742970246
+    }
+  },
+  {
+    "start_time": "2025-03-26T08:11:23+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1742976587
     }
   }
 ]
