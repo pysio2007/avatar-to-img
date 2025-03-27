@@ -1354,7 +1354,7 @@
   },
   {
     "start_time": "2025-03-27T06:50:56+00:00",
-    "end_time": "2025-03-27T07:26:30+00:00",
+    "end_time": "2025-03-27T07:38:18+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在玩堡垒之夜",
@@ -1362,6 +1362,15 @@
       "introduce": "熊猫正在守护家园",
       "last_heartbeat": 1743058138,
       "rgba": "173,216,230,0.15"
+    }
+  },
+  {
+    "start_time": "2025-03-27T07:38:18+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1743060993
     }
   }
 ]
