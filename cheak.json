@@ -1318,11 +1318,23 @@
   },
   {
     "start_time": "2025-03-29T02:13:51+00:00",
-    "end_time": "2025-03-29T03:50:59+00:00",
+    "end_time": "2025-03-29T04:09:33+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1743214270
+    }
+  },
+  {
+    "start_time": "2025-03-29T04:09:33+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Rider",
+      "applicationOnline": true,
+      "introduce": "熊猫正在吃 .NET",
+      "last_heartbeat": 1743221254,
+      "rgba": "155,89,182,0.15"
     }
   }
 ]
