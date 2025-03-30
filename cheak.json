@@ -1357,7 +1357,7 @@
   },
   {
     "start_time": "2025-03-30T04:40:30+00:00",
-    "end_time": null,
+    "end_time": "2025-03-30T04:51:09+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
