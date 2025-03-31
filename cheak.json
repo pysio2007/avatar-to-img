@@ -1378,11 +1378,23 @@
   },
   {
     "start_time": "2025-03-31T02:35:58+00:00",
-    "end_time": "2025-03-31T04:45:38+00:00",
+    "end_time": "2025-03-31T04:55:31+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1743388437
+    }
+  },
+  {
+    "start_time": "2025-03-31T04:55:31+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - OpenBmclapi-Cache",
+      "last_heartbeat": 1743396797,
+      "rgba": "0,122,204,0.15"
     }
   }
 ]
