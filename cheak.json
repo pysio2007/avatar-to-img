@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-03T10:46:28+00:00",
-    "end_time": "2025-03-03T11:38:51+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\Downloads\\djzs.json",
-      "last_heartbeat": 1740998703,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-03T11:38:51+00:00",
     "end_time": "2025-03-03T18:50:09+00:00",
     "data": {
@@ -1414,7 +1402,7 @@
   },
   {
     "start_time": "2025-03-31T09:25:19+00:00",
-    "end_time": "2025-03-31T10:28:18+00:00",
+    "end_time": "2025-03-31T10:46:34+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
