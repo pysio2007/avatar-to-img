@@ -1501,7 +1501,7 @@
   },
   {
     "start_time": "2025-04-02T21:31:04+00:00",
-    "end_time": "2025-04-02T21:41:24+00:00",
+    "end_time": "2025-04-02T21:51:08+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
@@ -1509,6 +1509,15 @@
       "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\Downloads\\config-PysioHome.local-20250403052058.xml",
       "last_heartbeat": 1743629319,
       "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-04-02T21:51:08+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1743630508
     }
   }
 ]
