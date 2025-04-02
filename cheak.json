@@ -1429,13 +1429,25 @@
   },
   {
     "start_time": "2025-04-02T16:56:36+00:00",
-    "end_time": "2025-04-02T17:53:17+00:00",
+    "end_time": "2025-04-02T18:18:06+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
       "applicationOnline": true,
       "introduce": "熊猫正在写代码 - Vue-Life-Cheak",
       "last_heartbeat": 1743612836,
+      "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-04-02T18:18:06+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - Vue-Life-Cheak",
+      "last_heartbeat": 1743616749,
       "rgba": "0,122,204,0.15"
     }
   }
