@@ -1441,7 +1441,7 @@
   },
   {
     "start_time": "2025-04-02T18:18:06+00:00",
-    "end_time": null,
+    "end_time": "2025-04-02T18:43:03+00:00",
     "data": {
       "alive": false,
       "application": "熊猫正在使用 Visual Studio Code",
@@ -1449,6 +1449,15 @@
       "introduce": "熊猫正在写代码 - Vue-Life-Cheak",
       "last_heartbeat": 1743616749,
       "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-04-02T18:43:03+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1743619169
     }
   }
 ]
