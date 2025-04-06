@@ -1486,11 +1486,20 @@
   },
   {
     "start_time": "2025-04-05T15:11:58+00:00",
-    "end_time": "2025-04-06T05:30:18+00:00",
+    "end_time": "2025-04-06T05:41:48+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1743865037
+    }
+  },
+  {
+    "start_time": "2025-04-06T05:41:48+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1743917994
     }
   }
 ]
