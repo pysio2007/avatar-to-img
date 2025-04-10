@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-10T17:12:18+00:00",
-    "end_time": "2025-03-10T17:30:57+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - emoji",
-      "last_heartbeat": 1741626614,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-10T17:30:57+00:00",
     "end_time": "2025-03-10T18:37:06+00:00",
     "data": {
@@ -1483,11 +1471,23 @@
   },
   {
     "start_time": "2025-04-10T05:18:17+00:00",
-    "end_time": "2025-04-10T16:56:17+00:00",
+    "end_time": "2025-04-10T17:17:19+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1744262162
+    }
+  },
+  {
+    "start_time": "2025-04-10T17:17:19+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 IntelliJ IDEA",
+      "applicationOnline": true,
+      "introduce": "熊猫正在吃 Java",
+      "last_heartbeat": 1744305303,
+      "rgba": "255,165,0,0.15"
     }
   }
 ]
