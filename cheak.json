@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-12T12:44:27+00:00",
-    "end_time": "2025-03-12T13:14:49+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 DataGrip",
-      "applicationOnline": true,
-      "introduce": "熊猫正在吃芒果",
-      "last_heartbeat": 1741783332,
-      "rgba": "230,126,34,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-12T13:14:49+00:00",
     "end_time": "2025-03-12T22:57:55+00:00",
     "data": {
@@ -1636,7 +1624,7 @@
   },
   {
     "start_time": "2025-04-12T12:32:47+00:00",
-    "end_time": null,
+    "end_time": "2025-04-12T13:00:26+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
