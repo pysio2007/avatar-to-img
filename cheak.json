@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-12T02:45:57+00:00",
-    "end_time": "2025-03-12T03:41:14+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 DataGrip",
-      "applicationOnline": true,
-      "introduce": "熊猫正在吃芒果",
-      "last_heartbeat": 1741747454,
-      "rgba": "230,126,34,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-12T03:41:14+00:00",
     "end_time": "2025-03-12T04:11:50+00:00",
     "data": {
@@ -1612,7 +1600,7 @@
   },
   {
     "start_time": "2025-04-11T23:48:58+00:00",
-    "end_time": "2025-04-12T01:56:05+00:00",
+    "end_time": "2025-04-12T02:58:01+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
@@ -1620,6 +1608,15 @@
       "introduce": "熊猫正在写代码 - Vue-blog-Dev",
       "last_heartbeat": 1744415213,
       "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-04-12T02:58:01+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "applicationOnline": false,
+      "last_heartbeat": 1744423996
     }
   }
 ]
