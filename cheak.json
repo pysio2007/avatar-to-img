@@ -1765,7 +1765,7 @@
   },
   {
     "start_time": "2025-04-13T20:46:26+00:00",
-    "end_time": "2025-04-13T21:29:41+00:00",
+    "end_time": "2025-04-13T21:39:55+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 DataGrip",
@@ -1773,6 +1773,18 @@
       "introduce": "熊猫正在吃芒果",
       "last_heartbeat": 1744577030,
       "rgba": "230,126,34,0.15"
+    }
+  },
+  {
+    "start_time": "2025-04-13T21:39:55+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - SSH-Games",
+      "last_heartbeat": 1744580224,
+      "rgba": "0,122,204,0.15"
     }
   }
 ]
