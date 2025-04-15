@@ -1819,11 +1819,23 @@
   },
   {
     "start_time": "2025-04-15T12:51:39+00:00",
-    "end_time": "2025-04-15T13:53:19+00:00",
+    "end_time": "2025-04-15T14:13:32+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1744721318
+    }
+  },
+  {
+    "start_time": "2025-04-15T14:13:32+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 DataGrip",
+      "applicationOnline": true,
+      "introduce": "熊猫正在吃芒果",
+      "last_heartbeat": 1744726289,
+      "rgba": "230,126,34,0.15"
     }
   }
 ]
