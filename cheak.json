@@ -1846,7 +1846,7 @@
   },
   {
     "start_time": "2025-04-17T13:45:31+00:00",
-    "end_time": "2025-04-17T13:55:09+00:00",
+    "end_time": "2025-04-17T14:16:31+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
@@ -1854,6 +1854,15 @@
       "introduce": "熊猫正在写代码 - akaere-networks-ixp",
       "last_heartbeat": 1744897382,
       "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-04-17T14:16:31+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1744899237
     }
   }
 ]
