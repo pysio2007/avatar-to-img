@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-19T20:45:16+00:00",
-    "end_time": "2025-03-19T21:14:23+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - Vue-blog-Dev",
-      "last_heartbeat": 1742417001,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-19T21:14:23+00:00",
     "end_time": "2025-03-20T16:55:18+00:00",
     "data": {
@@ -1927,7 +1915,7 @@
   },
   {
     "start_time": "2025-04-19T12:45:25+00:00",
-    "end_time": "2025-04-19T20:44:25+00:00",
+    "end_time": "2025-04-19T20:54:12+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
