@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-23T12:35:42+00:00",
-    "end_time": "2025-03-23T13:26:57+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - Rust-Bmclapi",
-      "last_heartbeat": 1742733225,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-23T13:26:57+00:00",
     "end_time": "2025-03-23T18:28:57+00:00",
     "data": {
@@ -2005,11 +1993,23 @@
   },
   {
     "start_time": "2025-04-23T10:45:31+00:00",
-    "end_time": "2025-04-23T11:59:52+00:00",
+    "end_time": "2025-04-23T12:52:56+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1745405068
+    }
+  },
+  {
+    "start_time": "2025-04-23T12:52:56+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "application": "熊猫正在使用 Visual Studio Code",
+      "applicationOnline": true,
+      "introduce": "熊猫正在写代码 - 这只熊猫在编辑文件",
+      "last_heartbeat": 1745412751,
+      "rgba": "0,122,204,0.15"
     }
   }
 ]
