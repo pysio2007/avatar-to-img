@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-23T01:50:30+00:00",
-    "end_time": "2025-03-23T02:56:57+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - Rust-Bmclapi",
-      "last_heartbeat": 1742694517,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-23T02:56:57+00:00",
     "end_time": "2025-03-23T05:10:22+00:00",
     "data": {
@@ -2050,7 +2038,7 @@
   },
   {
     "start_time": "2025-04-22T22:32:00+00:00",
-    "end_time": "2025-04-23T00:50:39+00:00",
+    "end_time": "2025-04-23T02:21:37+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
