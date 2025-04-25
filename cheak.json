@@ -2122,7 +2122,7 @@
   },
   {
     "start_time": "2025-04-25T12:59:25+00:00",
-    "end_time": null,
+    "end_time": "2025-04-25T13:33:26+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
