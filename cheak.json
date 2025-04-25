@@ -2122,11 +2122,20 @@
   },
   {
     "start_time": "2025-04-25T16:31:32+00:00",
-    "end_time": "2025-04-25T21:52:12+00:00",
+    "end_time": "2025-04-25T22:09:59+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1745596968
+    }
+  },
+  {
+    "start_time": "2025-04-25T22:09:59+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1745618966
     }
   }
 ]
