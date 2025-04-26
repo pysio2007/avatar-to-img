@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-03-26T21:44:52+00:00",
-    "end_time": "2025-03-26T22:33:31+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在玩堡垒之夜",
-      "applicationOnline": true,
-      "introduce": "熊猫正在守护家园",
-      "last_heartbeat": 1743025380,
-      "rgba": "173,216,230,0.15"
-    }
-  },
-  {
     "start_time": "2025-03-26T22:33:31+00:00",
     "end_time": "2025-03-27T02:59:14+00:00",
     "data": {
@@ -2170,7 +2158,7 @@
   },
   {
     "start_time": "2025-04-26T18:29:18+00:00",
-    "end_time": "2025-04-26T21:37:10+00:00",
+    "end_time": "2025-04-26T21:46:48+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
