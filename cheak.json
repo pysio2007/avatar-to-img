@@ -2170,9 +2170,18 @@
   },
   {
     "start_time": "2025-04-26T22:54:54+00:00",
-    "end_time": null,
+    "end_time": "2025-04-26T23:14:55+00:00",
     "data": {
       "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1745707871
+    }
+  },
+  {
+    "start_time": "2025-04-26T23:14:55+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1745707871
     }
