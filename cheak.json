@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-04-09T11:40:12+00:00",
-    "end_time": "2025-04-09T11:50:05+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\AppData\\Local\\Temp\\44b58f66-25a7-450e-84ae-248f08dc1159_vendor.zip.159\\vendor\\whmcs\\whmcs-foundation\\lib\\License.php",
-      "last_heartbeat": 1744198645,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-04-09T11:50:05+00:00",
     "end_time": "2025-04-09T11:59:44+00:00",
     "data": {
@@ -1699,7 +1687,7 @@
   },
   {
     "start_time": "2025-05-08T07:37:36+00:00",
-    "end_time": "2025-05-09T11:36:43+00:00",
+    "end_time": "2025-05-09T11:46:21+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
