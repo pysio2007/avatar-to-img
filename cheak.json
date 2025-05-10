@@ -1,17 +1,5 @@
 [
   {
-    "start_time": "2025-04-10T17:17:19+00:00",
-    "end_time": "2025-04-10T17:33:57+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 IntelliJ IDEA",
-      "applicationOnline": true,
-      "introduce": "熊猫正在吃 Java",
-      "last_heartbeat": 1744305303,
-      "rgba": "255,165,0,0.15"
-    }
-  },
-  {
     "start_time": "2025-04-10T17:33:57+00:00",
     "end_time": "2025-04-10T17:43:28+00:00",
     "data": {
@@ -1621,7 +1609,7 @@
   },
   {
     "start_time": "2025-05-08T07:37:36+00:00",
-    "end_time": "2025-05-10T17:00:18+00:00",
+    "end_time": "2025-05-10T17:21:14+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
