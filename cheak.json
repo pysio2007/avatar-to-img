@@ -1060,7 +1060,7 @@
   },
   {
     "start_time": "2025-05-15T04:32:10+00:00",
-    "end_time": null,
+    "end_time": "2025-05-15T04:48:03+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
