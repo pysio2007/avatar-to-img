@@ -1,26 +1,5 @@
 [
   {
-    "start_time": "2025-04-19T03:19:52+00:00",
-    "end_time": "2025-04-19T03:44:05+00:00",
-    "data": {
-      "alive": false,
-      "applicationOnline": false,
-      "last_heartbeat": 1745030570
-    }
-  },
-  {
-    "start_time": "2025-04-19T03:44:05+00:00",
-    "end_time": "2025-04-19T03:54:53+00:00",
-    "data": {
-      "alive": true,
-      "application": "熊猫正在使用 Visual Studio Code",
-      "applicationOnline": true,
-      "introduce": "熊猫正在写代码 - c:\\Users\\qq593\\Downloads\\ttb-jilemp.cn.key",
-      "last_heartbeat": 1745034194,
-      "rgba": "0,122,204,0.15"
-    }
-  },
-  {
     "start_time": "2025-04-19T03:54:53+00:00",
     "end_time": "2025-04-19T11:49:12+00:00",
     "data": {
@@ -910,7 +889,7 @@
   },
   {
     "start_time": "2025-05-19T02:56:17+00:00",
-    "end_time": null,
+    "end_time": "2025-05-19T03:47:32+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
