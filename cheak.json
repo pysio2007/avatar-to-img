@@ -1,14 +1,5 @@
 [
   {
-    "start_time": "2025-04-21T18:57:53+00:00",
-    "end_time": "2025-04-21T20:26:39+00:00",
-    "data": {
-      "alive": false,
-      "applicationOnline": false,
-      "last_heartbeat": 1745260966
-    }
-  },
-  {
     "start_time": "2025-04-21T20:26:39+00:00",
     "end_time": "2025-04-21T22:37:40+00:00",
     "data": {
@@ -853,11 +844,20 @@
   },
   {
     "start_time": "2025-05-21T18:25:22+00:00",
-    "end_time": "2025-05-21T18:48:39+00:00",
+    "end_time": "2025-05-21T18:58:11+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1747849800
+    }
+  },
+  {
+    "start_time": "2025-05-21T18:58:11+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1747853866
     }
   }
 ]
