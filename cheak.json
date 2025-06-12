@@ -649,7 +649,7 @@
   },
   {
     "start_time": "2025-06-12T05:45:04+00:00",
-    "end_time": null,
+    "end_time": "2025-06-12T05:54:56+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
