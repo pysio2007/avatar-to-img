@@ -907,7 +907,7 @@
   },
   {
     "start_time": "2025-06-17T10:44:08+00:00",
-    "end_time": null,
+    "end_time": "2025-06-17T10:55:29+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
