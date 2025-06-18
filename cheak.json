@@ -970,7 +970,7 @@
   },
   {
     "start_time": "2025-06-18T08:16:25+00:00",
-    "end_time": null,
+    "end_time": "2025-06-18T08:44:07+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
