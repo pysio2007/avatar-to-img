@@ -1,0 +1,59 @@
+name: Sync DN42 Registry
+
+on:
+  schedule:
+    # 每天同步一次
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # 允许手动触发
+  push:
+    branches: [ main ]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup SSH key
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSHKEYS }}
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "Pysio"
+        git config --global user.email "qq593277393@outlook.com"
+
+    - name: Add SSH known hosts
+      run: |
+        ssh-keyscan git.dn42.dev >> ~/.ssh/known_hosts
+        ssh-keyscan git.pysio.online >> ~/.ssh/known_hosts
+
+    - name: Add source remote
+      run: |
+        git remote add source git@git.dn42.dev:dn42/registry.git || true
+
+    - name: Fetch from source
+      run: |
+        git fetch source
+
+    - name: Sync to mirror
+      run: |
+        # 获取所有分支和标签
+        git fetch source --all --tags
+        
+        # 推送所有分支和标签到镜像仓库
+        git remote set-url origin git@git.pysio.online:pysio/mirrors-dn42.git
+        git push origin --all --force
+        git push origin --tags --force
+
+    - name: Report sync status
+      run: |
+        echo "✅ Successfully synced DN42 registry to mirror"
+        echo "Source: git@git.dn42.dev:dn42/registry.git"
+        echo "Mirror: git@git.pysio.online:pysio/mirrors-dn42.git"
