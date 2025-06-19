@@ -44,10 +44,10 @@ jobs:
 
     - name: Sync to mirror
       run: |
-        # 获取所有分支和标签
-        git fetch source --all --tags
+        # 获取所有分支
+        git fetch source --all
         
-        # 推送所有分支和标签到镜像仓库
+        # 推送所有分支到镜像仓库
         git remote set-url origin git@git.pysio.online:pysio/mirrors-dn42.git
         git push origin --all --force
         git push origin --tags --force
