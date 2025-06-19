@@ -14,11 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-
     - name: Setup SSH key
       uses: webfactory/ssh-agent@v0.9.0
       with:
@@ -34,17 +29,14 @@ jobs:
         ssh-keyscan git.dn42.dev >> ~/.ssh/known_hosts
         ssh-keyscan git.pysio.online >> ~/.ssh/known_hosts
 
-    - name: Add source remote
+    - name: Clone source repository
       run: |
-        git remote add source git@git.dn42.dev:dn42/registry.git || true
-
-    - name: Fetch from source
-      run: |
-        git fetch source
+        git clone --mirror git@git.dn42.dev:dn42/registry.git repo.git
 
     - name: Sync to mirror
-      run: |        
-        # 推送所有分支到镜像仓库
+      run: |
+        cd repo.git
+        # 推送所有分支和引用到镜像仓库
         git remote set-url origin git@git.pysio.online:pysio/mirrors-dn42.git
         git push origin --all --force
         git push origin --tags --force
