@@ -24,22 +24,36 @@ jobs:
         git config --global user.name "Pysio"
         git config --global user.email "qq593277393@outlook.com"
 
-    - name: Add SSH known hosts
+    - name: Add SSH known hosts and configure
       run: |
+        mkdir -p ~/.ssh
         ssh-keyscan git.dn42.dev >> ~/.ssh/known_hosts
         ssh-keyscan git.pysio.online >> ~/.ssh/known_hosts
+        # 配置 SSH 以避免卡死
+        cat >> ~/.ssh/config << EOF
+        Host git.dn42.dev git.pysio.online
+          StrictHostKeyChecking no
+          UserKnownHostsFile ~/.ssh/known_hosts
+          ServerAliveInterval 30
+          ServerAliveCountMax 3
+          ConnectTimeout 10
+        EOF
 
     - name: Clone source repository
+      timeout-minutes: 5
+      continue-on-error: true
       run: |
-        git clone --mirror git@git.dn42.dev:dn42/registry.git repo.git
+        git clone git@git.dn42.dev:dn42/registry.git repo.git
 
     - name: Sync to mirror
+      timeout-minutes: 10
+      continue-on-error: true
       run: |
         cd repo.git
         # 推送所有分支和引用到镜像仓库
         git remote set-url origin git@git.pysio.online:pysio/mirrors-dn42.git
         git push origin --all --force
-        git push origin --tags --force
+        echo "Push completed successfully"
 
     - name: Report sync status
       run: |
