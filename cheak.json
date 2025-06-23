@@ -871,11 +871,20 @@
   },
   {
     "start_time": "2025-06-22T18:32:04+00:00",
-    "end_time": "2025-06-23T05:31:08+00:00",
+    "end_time": "2025-06-23T05:48:09+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1750614914
+    }
+  },
+  {
+    "start_time": "2025-06-23T05:48:09+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1750657682
     }
   }
 ]
