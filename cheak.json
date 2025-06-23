@@ -919,11 +919,20 @@
   },
   {
     "start_time": "2025-06-23T21:45:37+00:00",
-    "end_time": "2025-06-23T21:55:20+00:00",
+    "end_time": "2025-06-23T22:18:12+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1750715118
+    }
+  },
+  {
+    "start_time": "2025-06-23T22:18:12+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "applicationOnline": false,
+      "last_heartbeat": 1750715606
     }
   }
 ]
