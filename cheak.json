@@ -1753,11 +1753,20 @@
   },
   {
     "start_time": "2025-07-13T10:29:59+00:00",
-    "end_time": "2025-07-13T10:47:44+00:00",
+    "end_time": "2025-07-13T10:57:43+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1752400546
+    }
+  },
+  {
+    "start_time": "2025-07-13T10:57:43+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1752404258
     }
   }
 ]
