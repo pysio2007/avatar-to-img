@@ -1819,7 +1819,7 @@
   },
   {
     "start_time": "2025-07-17T08:18:00+00:00",
-    "end_time": null,
+    "end_time": "2025-07-17T08:46:22+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
