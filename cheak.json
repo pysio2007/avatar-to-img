@@ -1,14 +1,5 @@
 [
   {
-    "start_time": "2025-06-17T04:15:22+00:00",
-    "end_time": "2025-06-17T09:29:52+00:00",
-    "data": {
-      "alive": false,
-      "applicationOnline": false,
-      "last_heartbeat": 1750132952
-    }
-  },
-  {
     "start_time": "2025-06-17T09:29:52+00:00",
     "end_time": "2025-06-17T10:44:08+00:00",
     "data": {
@@ -1789,7 +1780,7 @@
   },
   {
     "start_time": "2025-07-17T03:01:18+00:00",
-    "end_time": "2025-07-17T04:01:40+00:00",
+    "end_time": "2025-07-17T04:46:27+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
