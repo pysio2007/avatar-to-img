@@ -2008,7 +2008,7 @@
   },
   {
     "start_time": "2025-07-21T13:28:44+00:00",
-    "end_time": null,
+    "end_time": "2025-07-21T13:56:39+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
