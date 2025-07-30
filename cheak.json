@@ -1,14 +1,5 @@
 [
   {
-    "start_time": "2025-06-30T07:26:25+00:00",
-    "end_time": "2025-06-30T17:24:36+00:00",
-    "data": {
-      "alive": true,
-      "applicationOnline": false,
-      "last_heartbeat": 1751268385
-    }
-  },
-  {
     "start_time": "2025-06-30T17:24:36+00:00",
     "end_time": "2025-06-30T18:11:41+00:00",
     "data": {
@@ -1879,7 +1870,7 @@
   },
   {
     "start_time": "2025-07-29T06:00:55+00:00",
-    "end_time": "2025-07-30T07:20:02+00:00",
+    "end_time": "2025-07-30T07:42:22+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
