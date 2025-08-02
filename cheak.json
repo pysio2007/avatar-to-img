@@ -1882,11 +1882,20 @@
   },
   {
     "start_time": "2025-08-02T16:44:48+00:00",
-    "end_time": null,
+    "end_time": "2025-08-02T16:59:03+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1754151588
+    }
+  },
+  {
+    "start_time": "2025-08-02T16:59:03+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1754153927
     }
   }
 ]
