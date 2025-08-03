@@ -1909,7 +1909,7 @@
   },
   {
     "start_time": "2025-08-03T16:53:52+00:00",
-    "end_time": null,
+    "end_time": "2025-08-03T17:13:57+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
