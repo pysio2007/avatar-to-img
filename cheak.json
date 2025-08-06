@@ -1912,7 +1912,7 @@
   },
   {
     "start_time": "2025-08-06T20:37:03+00:00",
-    "end_time": "2025-08-06T21:13:25+00:00",
+    "end_time": "2025-08-06T21:33:02+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 DataGrip",
@@ -1920,6 +1920,15 @@
       "introduce": "熊猫正在吃 SQL",
       "last_heartbeat": 1754512599,
       "rgba": "230,126,34,0.15"
+    }
+  },
+  {
+    "start_time": "2025-08-06T21:33:02+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1754515976
     }
   }
 ]
