@@ -1927,11 +1927,20 @@
   },
   {
     "start_time": "2025-08-10T03:24:06+00:00",
-    "end_time": "2025-08-10T10:25:27+00:00",
+    "end_time": "2025-08-10T10:44:27+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1754793835
+    }
+  },
+  {
+    "start_time": "2025-08-10T10:44:27+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1754822637
     }
   }
 ]
