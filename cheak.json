@@ -1894,9 +1894,18 @@
   },
   {
     "start_time": "2025-08-15T13:36:36+00:00",
-    "end_time": null,
+    "end_time": "2025-08-15T13:50:51+00:00",
     "data": {
       "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1755264628
+    }
+  },
+  {
+    "start_time": "2025-08-15T13:50:51+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
       "applicationOnline": false,
       "last_heartbeat": 1755264628
     }
