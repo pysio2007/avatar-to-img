@@ -1921,11 +1921,20 @@
   },
   {
     "start_time": "2025-08-18T20:56:01+00:00",
-    "end_time": null,
+    "end_time": "2025-08-18T21:17:54+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1755550546
+    }
+  },
+  {
+    "start_time": "2025-08-18T21:17:54+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "applicationOnline": false,
+      "last_heartbeat": 1755550736
     }
   }
 ]
