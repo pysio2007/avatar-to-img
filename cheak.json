@@ -1987,7 +1987,7 @@
   },
   {
     "start_time": "2025-08-20T08:43:15+00:00",
-    "end_time": "2025-08-20T10:46:23+00:00",
+    "end_time": "2025-08-20T10:56:15+00:00",
     "data": {
       "alive": true,
       "application": "熊猫正在使用 Visual Studio Code",
@@ -1995,6 +1995,15 @@
       "introduce": "熊猫正在写代码 - 这只熊猫在编辑文件",
       "last_heartbeat": 1755679381,
       "rgba": "0,122,204,0.15"
+    }
+  },
+  {
+    "start_time": "2025-08-20T10:56:15+00:00",
+    "end_time": null,
+    "data": {
+      "alive": true,
+      "applicationOnline": false,
+      "last_heartbeat": 1755687364
     }
   }
 ]
