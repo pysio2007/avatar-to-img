@@ -2050,7 +2050,7 @@
   },
   {
     "start_time": "2025-08-20T20:32:30+00:00",
-    "end_time": null,
+    "end_time": "2025-08-20T20:46:20+00:00",
     "data": {
       "alive": false,
       "applicationOnline": false,
