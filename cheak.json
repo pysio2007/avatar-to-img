@@ -1993,11 +1993,20 @@
   },
   {
     "start_time": "2025-08-22T07:50:33+00:00",
-    "end_time": "2025-08-22T19:49:29+00:00",
+    "end_time": "2025-08-22T19:59:05+00:00",
     "data": {
       "alive": true,
       "applicationOnline": false,
       "last_heartbeat": 1755849024
+    }
+  },
+  {
+    "start_time": "2025-08-22T19:59:05+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "applicationOnline": false,
+      "last_heartbeat": 1755891784
     }
   }
 ]
