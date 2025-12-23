@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "start_time": "2025-12-23T14:47:59+00:00",
+    "end_time": null,
+    "data": {
+      "alive": false,
+      "applicationOnline": false,
+      "last_heartbeat": null
+    }
+  }
+]
