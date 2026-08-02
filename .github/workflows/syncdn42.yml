@@ -50,7 +50,7 @@ jobs:
       run: |
         cd repo.git
         # 推送所有分支和引用到镜像仓库
-        git remote set-url origin git@git.pysio.online:pysio/mirrors-dn42.git
+        git remote set-url origin git@git.akae.re:pysio/mirrors-dn42.git
         git push origin --all --force
         echo "Push completed successfully"
 
